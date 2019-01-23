@@ -60,7 +60,7 @@ export default {
   },
   mounted () {
     this.loading = true
-    axios.get(this.$serverUrl + 'api/customers/').then(resp => {
+    axios.get('https://kev-backend.herokuapp.com/api/customers/').then(resp => {
       this.customers = resp.data.data
       this.dataAvailable = true
       this.loading = false
