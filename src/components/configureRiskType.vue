@@ -79,9 +79,9 @@ export default {
       axios.post(this.$serverUrl + 'api/add_risk_type_fields/', this.risk_fields).then(resp => {
         this.fields = [{caption: '', field_type: '', default_value: ''}]
         if (resp.data.status === 'success') {
-          swal('Success', 'Fields submitted successfully!', 'success')
+          this.$swal('Success', 'Fields submitted successfully!', 'success')
         } else {
-          swal('Oops..', 'Something went wrong while updating fields!', 'error')
+          this.$swal('Oops..', 'Something went wrong while updating fields!', 'error')
         }
       }).catch(error => {
         console.log(error)

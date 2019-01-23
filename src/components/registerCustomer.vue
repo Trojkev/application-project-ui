@@ -101,10 +101,10 @@ export default {
     onSubmit () {
       axios.post(this.$serverUrl + 'api/register_customer/', this.customer_data).then(resp => {
         if (resp.data.status === 'success') {
-          swal('Success', 'Customer registered successfully!', 'success')
+          this.$swal('Success', 'Customer registered successfully!', 'success')
         } else {
           if (resp.data.message === 'Provided phone number is already taken') {
-            swal('Oops..', 'The customer with that phone number already exists!', 'error')
+            this.$swal('Oops..', 'The customer with that phone number already exists!', 'error')
           } else {
             ('Oops..', 'Something went wrong while registering Customer!', 'error')
           }

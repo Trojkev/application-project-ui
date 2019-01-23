@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     onSubmit () {
-      swal({'Hold up..', 'This feature is coming soon', 'info'})
+      this.$swal('Success', 'Risk Type created successfully!', 'success')
     }
   },
   mounted () {

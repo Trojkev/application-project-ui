@@ -52,9 +52,9 @@ export default {
     onSubmit () {
       axios.post(this.$serverUrl + 'api/add_risk_type/', this.r_type).then(resp => {
         if (resp.data.status === 'success') {
-          swal('Success', 'Risk Type created successfully!', 'success')
+          this.$swal('Success', 'Risk Type created successfully!', 'success')
         } else {
-          swal('Oops..', 'Something went wrong while creating RiskType!', 'error')
+          this.$swal('Oops..', 'Something went wrong while creating RiskType!', 'error')
         }
       }).catch(error => {
         console.log(error)
