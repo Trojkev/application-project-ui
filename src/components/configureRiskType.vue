@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="card-footer">
-      <router-link to="/"><button class="btn btn-primary" @click="submitFields">
+      <router-link to="/"><button class="btn btn-primary" type="button" @click="submitFields">
        Submit </button></router-link>
     </div>
     </div>

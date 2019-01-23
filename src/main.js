@@ -14,7 +14,6 @@ Vue.filter('date', function (value) {
 })
 
 // Vue.prototype.$serverUrl = 'http://127.0.0.1:8000/'  // local server
-
 Vue.prototype.$serverUrl = 'https://kev-backend.herokuapp.com/'   // production server
 
 new Vue({

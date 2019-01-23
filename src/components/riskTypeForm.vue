@@ -25,8 +25,8 @@
           <div class="card-footer">
           <!-- <router-link to="/"><button type="submit" class="btn btn-primary"
            @click.prevent="onSubmit">Submit</button></router-link> -->
-           <button type="submit" class="btn btn-primary"
-            @click.prevent="onSubmit">Submit</button>
+           <button type="button" class="btn btn-primary"
+            @click="onSubmit">Submit</button>
         </div>
       </div>
     </div>

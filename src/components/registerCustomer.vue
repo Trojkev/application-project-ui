@@ -70,8 +70,8 @@
                 </div>
               </div>
               <div class="row">
-                <router-link to="/customers"><button type="submit" class="btn btn-primary"
-                 @click.prevent="onSubmit">Submit</button></router-link>
+                <router-link to="/customers"><button type="button" name="onSubmit" class="btn btn-primary"
+                 @click.prevent="onSubmit">Submit</button></router-link>>
               </div>
             </form>
           </div>

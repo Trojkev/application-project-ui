@@ -27,8 +27,8 @@
               <textarea class="form-control" id="description" v-model="r_type.description"
               placeholder="Enter description here"></textarea>
             </div>
-            <router-link to="/"><button type="submit" class="btn btn-primary"
-             @click.prevent="onSubmit">Submit</button></router-link>
+            <router-link to="/"><button type="button" class="btn btn-primary"
+             @click="onSubmit">Submit</button></router-link>
           </form>
           </div>
         </div>
