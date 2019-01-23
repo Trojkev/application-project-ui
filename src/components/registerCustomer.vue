@@ -70,8 +70,8 @@
                 </div>
               </div>
               <div class="row">
-                <a to="/customers"><button type="button" name="onSubmit" class="btn btn-primary"
-                 @click="onSubmit">Submit</button></a>
+                <a href="/customers"><button type="button" class="btn btn-primary"
+                  @click="onSubmit">Submit</button></a>
               </div>
             </form>
           </div>
