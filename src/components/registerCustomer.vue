@@ -70,8 +70,8 @@
                 </div>
               </div>
               <div class="row">
-                <router-link to="/customers"><button type="button" name="onSubmit" class="btn btn-primary"
-                 @click.prevent="onSubmit">Submit</button></router-link>>
+                <a to="/customers"><button type="button" name="onSubmit" class="btn btn-primary"
+                 @click="onSubmit">Submit</button></a>
               </div>
             </form>
           </div>
@@ -101,12 +101,12 @@ export default {
     onSubmit () {
       axios.post(this.$serverUrl + 'api/register_customer/', this.customer_data).then(resp => {
         if (resp.data.status === 'success') {
-          this.$swal('Success', 'Customer registered successfully!', 'success')
+          swal('Success', 'Customer registered successfully!', 'success')
         } else {
           if (resp.data.message === 'Provided phone number is already taken') {
-            this.$swal('Oops..', 'The customer with that phone number already exists!', 'error')
+            swal('Oops..', 'The customer with that phone number already exists!', 'error')
           } else {
-            this.$swal('Oops..', 'Something went wrong while registering Customer!', 'error')
+            ('Oops..', 'Something went wrong while registering Customer!', 'error')
           }
         }
       }).catch(error => {

@@ -23,10 +23,8 @@
           </div>
         </div>
           <div class="card-footer">
-          <!-- <router-link to="/"><button type="submit" class="btn btn-primary"
-           @click.prevent="onSubmit">Submit</button></router-link> -->
-           <button type="button" class="btn btn-primary"
-            @click="onSubmit">Submit</button>
+          <router-link to="/"><button type="submit" class="btn btn-primary"
+           @click.prevent="onSubmit">Submit</button></router-link>
         </div>
       </div>
     </div>
@@ -44,7 +42,9 @@ export default {
     }
   },
   methods: {
-    onSubmit () {}
+    onSubmit () {
+      swal({'Hold up..', 'This feature is coming soon', 'info'})
+    }
   },
   mounted () {
     axios.post(this.$serverUrl + 'api/get_risk_type/', {'id': this.id}).then(resp => {

@@ -27,8 +27,8 @@
               <textarea class="form-control" id="description" v-model="r_type.description"
               placeholder="Enter description here"></textarea>
             </div>
-            <router-link to="/"><button type="button" class="btn btn-primary"
-             @click="onSubmit">Submit</button></router-link>
+            <a href="/"><button type="button" class="btn btn-primary"
+             @click="onSubmit">Submit</button></a>
           </form>
           </div>
         </div>
@@ -52,9 +52,9 @@ export default {
     onSubmit () {
       axios.post(this.$serverUrl + 'api/add_risk_type/', this.r_type).then(resp => {
         if (resp.data.status === 'success') {
-          this.$swal('Success', 'Risk Type created successfully!', 'success')
+          swal('Success', 'Risk Type created successfully!', 'success')
         } else {
-          this.$swal('Oops..', 'Something went wrong while creating RiskType!', 'error')
+          swal('Oops..', 'Something went wrong while creating RiskType!', 'error')
         }
       }).catch(error => {
         console.log(error)

@@ -42,8 +42,8 @@
       </div>
     </div>
     <div class="card-footer">
-      <router-link to="/"><button class="btn btn-primary" type="button" @click="submitFields">
-       Submit </button></router-link>
+      <a href="/"><button class="btn btn-primary" type="button" @click="submitFields">
+       Submit </button></a>
     </div>
     </div>
   </section>
@@ -79,9 +79,9 @@ export default {
       axios.post(this.$serverUrl + 'api/add_risk_type_fields/', this.risk_fields).then(resp => {
         this.fields = [{caption: '', field_type: '', default_value: ''}]
         if (resp.data.status === 'success') {
-          this.$swal('Success', 'Fields submitted successfully!', 'success')
+          swal('Success', 'Fields submitted successfully!', 'success')
         } else {
-          this.$swal('Oops..', 'Something went wrong while updating fields!', 'error')
+          swal('Oops..', 'Something went wrong while updating fields!', 'error')
         }
       }).catch(error => {
         console.log(error)
