@@ -41,8 +41,9 @@
                 </tr>
               </tbody>
             </table>
-            <center><bar-loader class="custom-class" name="loader" :loading="loading"
-              style="size: 150px color: #bada55"></bar-loader></center>
+            <div class="center" v-if="loading">
+              <ring-loader :loading="loading" :color="color" :size="size"></ring-loader>
+            </div>
             <div class="center" v-if="!dataAvailable">
               <center >No data available</center>
             </div>

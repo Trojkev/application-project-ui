@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueSwal from 'vue-swal'
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 import App from './App'
 import router from './router'
 
