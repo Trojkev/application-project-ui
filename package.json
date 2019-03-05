@@ -10,7 +10,8 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -80,5 +81,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "heroku-run-build-script": true
 }
